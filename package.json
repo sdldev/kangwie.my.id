@@ -4,12 +4,21 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro build && astro preview --port 8080",
-    "build": "astro build",
+    "start": "astro dev",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.2.3"
+    "@astrojs/check": "^0.3.1",
+    "@astrojs/starlight": "^0.12.1",
+    "@astrojs/tailwind": "^5.0.2",
+    "astro": "^3.2.3",
+    "autoprefixer": "^10.4.16",
+    "prettier": "^3.1.0",
+    "prettier-plugin-astro": "^0.12.2",
+    "sharp": "^0.32.5",
+    "starlight-blog": "^0.4.0",
+    "typescript": "^5.2.2"
   }
 }
