@@ -5,7 +5,8 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  // …
+  site: 'https://kangwie.my.id',
+
   integrations: [
   // Add the Starlight Blog integration.
   starlightBlog(), starlight({
@@ -18,10 +19,16 @@ export default defineConfig({
     sidebar: [{
       label: 'Dasar',
       collapsed: true,
-      items: [{
+      items: [
+        {
         label: 'start',
         link: '/dasar/start/'
-      }]
+        },
+        {
+          label: 'Markdown',
+          link: '/dasar/markdown/'
+        }
+      ]
     }, {
       label: 'Astro',
       collapsed: true,
@@ -33,7 +40,16 @@ export default defineConfig({
         link: '/astro/install/'
       }]
     }],
-    title: 'kangwie',
+    title: 'k@ngwie',
+    social: {
+      'x.com': 'https://twitter.com/sidolapak',
+      github: 'https://github.com/sdldev',
+    },
+    customCss: [
+      // Path relative ke custom CSS file Anda
+      './src/styles/custom.css',
+    ],
+
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 2
