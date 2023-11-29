@@ -6,7 +6,10 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://kangwie.my.id',
-
+  image: {
+    service: { entrypoint: 'astro/assets/services/sharp' },
+    domains: ['https://kangwie.my.id'],
+  },
   integrations: [
   // Add the Starlight Blog integration.
   starlightBlog(), starlight({
